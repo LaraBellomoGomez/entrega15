@@ -19,14 +19,38 @@
     height: 250px;
 }
 
-
-
-.ventas, .alquiler, .propiedadesAlquiler, .propiedadesVenta {
+.ventas, 
+.alquiler, 
+.propiedadesAlquiler, 
+.propiedadesVenta {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* desktop */
     gap: 20px;
     padding: 40px;
 }
+
+/* Tablet (hasta 1024px) */
+@media (max-width: 1024px) {
+    .ventas, 
+    .alquiler, 
+    .propiedadesAlquiler, 
+    .propiedadesVenta {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px;
+    }
+}
+
+/* Móvil (hasta 768px) */
+@media (max-width: 768px) {
+    .ventas, 
+    .alquiler, 
+    .propiedadesAlquiler, 
+    .propiedadesVenta {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
+
 
 
 .card {
